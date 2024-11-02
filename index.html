@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <h2>Open console for outputs</h2>
+
+
+
+    <script>
+        //  WAPT count vowels and consonants 
+
+        let str = "Naga Ganesh";
+        vowels = 0;
+        consonants = 0;
+        for (i = 0; i < str.length; i++) {
+            if (str[i] == "a" || str[i] == "e" || str[i] == "i" || str[i] == "o" || str[i] == "u" || str[i] == "A" || str[i] == "E" || str[i] == "I" ||
+                str[i] == "O" || str[i] == "U") {
+                vowels++;
+            }
+            else {
+                consonants++;
+            }
+        }
+        console.log(`vowels:${vowels}`);
+        console.log(`consonants:${consonants}`);
+
+
+
+
+        // WAPTP sum of multiples of 3
+        let num = 3;
+        mul = 1;
+        sum = 0;
+        for (i = 1; i <= 10; i++) {
+            mul = num * i;
+            sum = sum + mul;
+        }
+        console.log(sum);
+
+
+        //    WAPTP max of an array
+        let arr = [3, 2, 6, 1, 4, 8, 2, 4, 3];
+        max = arr[0];
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        console.log(max)
+
+
+
+        // check whether a given number is armstrong or not
+        var number = parseInt(prompt("Enter a Number: "));
+        count = 0;
+        num = number;
+        while (num > 0) {
+            count++;
+            num = parseInt(num / 10);
+        }
+        console.log(count);
+        num = number;
+        sum = 0;
+        for (i = 1; i <= count; i++) {
+            rem = num % 10;
+            exp = rem ** count;
+            sum = sum + exp;
+            num = parseInt(num / 10);
+        }
+        console.log(sum);
+        if (sum == number) {
+            console.log(`${number} is armstrong`);
+        }
+        else {
+            console.log(`${number} is not armstrong number`);
+        }
+
+
+
+        // WAPTP average of numbers
+        let arr1 = [3, 2, 6, 1, 4, 8, 2, 4, 3];
+        sum = 0;
+        for (i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+            avg = sum / arr.length;
+        }
+        console.log(avg)
+    </script>
+</body>
+
+</html>
